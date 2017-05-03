@@ -7,6 +7,7 @@
     <li role="presentation"><a href="#Ingresos" aria-controls="messages" role="tab" data-toggle="tab">Ingresos</a></li>
     <li role="presentation"><a href="#Egresos" aria-controls="settings" role="tab" data-toggle="tab">Egresos</a></li>
     <li role="presentation"><a href="#LDiario" aria-controls="settings" role="tab" data-toggle="tab">Libro Diario</a></li>
+    <li role="presentation"><a href="#Prueba" aria-controls="settings" role="tab" data-toggle="tab">Prueba</a></li>
   </ul>
 
   <!-- Tab panes -->
@@ -34,6 +35,11 @@
       <div role="tabpanel" class="tab-pane" id="LDiario">
         <?php
             $this->load->view("usuario/formulario_LDiario");            
+        ?> 
+      </div>
+      <div role="tabpanel" class="tab-pane" id="Prueba">
+        <?php
+            $this->load->view("usuario/Prueba");            
         ?> 
       </div>
   </div>

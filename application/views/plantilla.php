@@ -21,6 +21,49 @@
         <!--<script type="text/javascript">-->
    <script>
             $(document).ready(function (){
+            //prueba2
+            $(add_button).click(function(e){ 
+                // on add input button click
+                e.preventDefault();
+
+                // max input box allowed
+                // Reduce nesting!
+//                if(x >= max_fields){ 
+//                    return;
+//                }
+
+                //text box increment
+//                x++; 
+                var tmp = $(wrapper).append('<div>\
+                    <div class="input-group date datepicker_init">\
+                        <input class="form-control" type="text" name="mytext[]">\
+                        <span class="input-group-addon">\
+                            <span class="glyphicon glyphicon-calendar"></span>\
+                        </span>\
+                    </div>\
+                    <div class="input-group date datepicker_end">\
+                        <input class="form-control" type="text" name="mytext[]">\
+                        <span class="input-group-addon">\
+                            <span class="glyphicon glyphicon-calendar"></span>\
+                        </span>\
+                    </div>\
+                    <a href="#" class="remove_field red-color">Remove</a>\
+                <div class="voffset10"></div>\
+                </div>');
+
+                // Init the new pickers
+                $('.datepicker_init', tmp).datetimepicker({
+                    locale: 'es',
+                    format: 'YYYY-MM-DD HH:mm'
+                });
+
+                $('.datepicker_end', tmp).datetimepicker({
+                    locale: 'es',
+                    format: 'YYYY-MM-DD HH:mm',
+                    useCurrent: false
+                });
+            });
+            
             //prueba
                   var i=0;  
                   $('#add').click(function(){  
